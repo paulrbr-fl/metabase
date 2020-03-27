@@ -346,13 +346,79 @@
   }
 }
 @media print and (orientation: landscape) {
-  html {
-    width: 11in;
+  @page {
+    margin: 0cm;
+    padding: 0cm;
   }
-}
-
-@page {
-  margin: 1cm;
+  body {
+    -webkit-print-color-adjust: exact !important;
+  }
+  html {
+    width: 11.7in;
+    height: 8.5in;
+    font-size: 9pt !important;
+    margin: 0cm;
+    padding: 0cm;
+  }
+  .Nav {
+    display: none !important;
+  }
+  .Card {
+    margin: 0.5em !important;
+  }
+  .Dashboard {
+    overflow: hidden;
+  }
+  .cellData {
+    font-size: 7pt !important;
+  }
+  /* "Night" mode? */
+/*  html {
+    background-color: #2e353b !important;
+  }
+  .Dashboard {
+    background-color: #2e353b;
+  }
+  .Dashboard .DashboardHeader {
+    color: #ffffff;
+  }
+  .Dashboard .Card {
+    color: #ffffff !important;
+  }
+  .Dashboard .Header-button,
+  .Dashboard .Header-button svg {
+    color: rgba(116, 131, 143, 0.30000000000000004);
+  }
+  .Dashboard .fullscreen-normal-text {
+    color: #2e353b;
+    transition: color 1s linear;
+  }
+  .Dashboard .fullscreen-night-text {
+    color: rgba(255, 255, 255, 0.86);
+    transition: color 1s linear;
+  }
+  .Dashboard .DashCard .Card svg text {
+    fill: rgba(255, 255, 255, 0.86) !important;
+  }
+  .Dashboard .DashCard .Card {
+    background-color: #42484e;
+    border-color: #42484e;
+  }
+  .Dashboard .enable-dots-onhover .dc-tooltip circle.dot:hover,
+  .Dashboard .enable-dots .dc-tooltip circle.dot {
+    fill: currentColor;
+  }
+  .Dashboard .goal .line,
+  .Dashboard .trend .line {
+    stroke: white;
+  }
+  .Dashboard pre code {
+    background-color: rgba(255, 255, 255, 0.14);
+  }
+  .Dashboard text.value-label-outline {
+    stroke: #42484e;
+  }
+  /* END "Night" mode? */
 }
 
 /* when in night mode goal lines should be more visible */
